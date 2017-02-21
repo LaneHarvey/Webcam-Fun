@@ -9,5 +9,13 @@ function getVideo() {
     .then(localMediaStream => {
       video.src = window.URL.createObjectURL(localMediaStream);
       video.play();
+    })
+    .catch(err => {
+      console.error(`OH NO!!!!`, err);
     });
+}
+
+function paintToCanvas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight; 
 }
